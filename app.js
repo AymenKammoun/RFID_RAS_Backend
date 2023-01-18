@@ -80,6 +80,7 @@ app.post("/set-presence",async (req,res)=>{
 });
 
 app.get("/get-present",async (req,res)=> {
+    console.log("Get present!");
     let result=await query("select name from users where is_present = 1")
     let response={
         'success' : 1,
