@@ -27,7 +27,7 @@ con.connect(function(err) {
 const query = util.promisify(con.query).bind(con);
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('RAS project!')
 });
 
 app.post("/get-member",async (req,res)=>{
