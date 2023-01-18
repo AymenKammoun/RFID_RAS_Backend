@@ -1,10 +1,13 @@
 const express = require('express')
+var cors = require('cors')
 const mysql = require('mysql');
 const util = require('util');
 const bodyParser = require('body-parser');
 
 const app = express()
 const port = 3000
+
+app.use(cors())
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
